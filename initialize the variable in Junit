@@ -1,0 +1,27 @@
+This is the way to initialize the variable of serviceimpl class from junit classes.
+
+ 
+
+@InjectMocks
+
+                ServiceImpl serviceImpl;
+
+ 
+
+@Before
+
+                public void setUp() {
+
+                                ReflectionTestUtils.setField(serviceImpl, "threadsSize", 100);
+
+                                ReflectionTestUtils.setField(serviceImpl, "message", "Data inserted Succesfully");
+
+                                ReflectionTestUtils.setField(serviceImpl, "startDate", "01-JAN-2018");
+
+                                ReflectionTestUtils.setField(serviceImpl, "endDate", "01-JAN-2018");
+
+                                ReflectionTestUtils.setField(serviceImpl, "createdBy", "Amod");
+
+                                ReflectionTestUtils.setField(serviceImpl, "updatedBy", "Amod");
+
+                }
