@@ -1,0 +1,8 @@
+How to kill the process currently using a port on localhost in windows? [closed]
+Step 1:
+
+                netstat -ano | findstr :yourPortNumber
+
+step 2:
+
+            taskkill /PID typeyourPIDhere /F
