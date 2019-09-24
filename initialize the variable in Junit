@@ -12,7 +12,7 @@ This is the way to initialize the variable of serviceimpl class from junit class
 
                 public void setUp() {
                                // Inject object, variable name of java class, and the value which we want to pass.
-                                ReflectionTestUtils.setField(serviceImpl, "threadsSize", 100);
+                                ReflectionTestUtils.setField(serviceImpl, "variableName", Value);
 
                                 ReflectionTestUtils.setField(serviceImpl, "message", "Data inserted Succesfully");
 
@@ -20,8 +20,8 @@ This is the way to initialize the variable of serviceimpl class from junit class
 
                                 ReflectionTestUtils.setField(serviceImpl, "endDate", "01-JAN-2018");
 
-                                ReflectionTestUtils.setField(serviceImpl, "createdBy", "Amod");
+                                ReflectionTestUtils.setField(serviceImpl, "created", "Amod");
 
-                                ReflectionTestUtils.setField(serviceImpl, "updatedBy", "Amod");
+                                ReflectionTestUtils.setField(serviceImpl, "updated", "Amod");
 
                 }
