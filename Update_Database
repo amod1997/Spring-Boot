@@ -1,0 +1,24 @@
+// Controller
+
+	@PutMapping("/update/{laptopId}")
+	public ResponseEntity<String> updateLaptop(@RequestBody Laptop laptop, @PathVariable("laptopId") Integer laptopId)
+			throws Exception {
+		laptopService.updateLaptop(laptop, laptopId);
+		return new ResponseEntity<String>("Data Updated successfully", HttpStatus.OK);
+	}
+  
+  // service
+  
+  @Override
+	public void updateLaptop(Laptop laptop, Integer laptopId) throws Exception {
+		Optional<Laptop> findById = laptopRepository.findById(laptopId);
+		if (findById == null || !findById.isPresent()) {
+			throw new Exception("Id not found");
+		}
+		else if (findById != null && findById.isPresent()) {
+			findById.get().setLoptopBrand(laptop.getLoptopBrand());
+			findById.get().setLaptopDateIsuue(laptop.getLaptopDateIsuue());
+			laptop.setLaptopId(laptopId);
+			laptopRepository.save(laptop);
+		}
+	}
