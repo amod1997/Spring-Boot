@@ -1,0 +1,25 @@
+public void givenData_convertIntoCSV() throws IOException {
+
+           List<Ceo> dataLines = getAllCeo();
+
+          String timeStamp = new SimpleDateFormat("yyyy-MM-dd").format(Calendar.getInstance().getTime());
+
+           File folder = new File(timeStamp);
+
+           folder.mkdir();
+
+           File file = new File(folder + "/file.csv");
+
+ 
+
+           try (PrintWriter pw = new PrintWriter(file)) {
+
+                dataLines.stream().map(Ceo::toString).forEach(pw::println);
+
+           }
+
+           System.out.println(file.getAbsolutePath());
+
+           System.out.println("It's working");
+
+     }
