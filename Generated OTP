@@ -1,0 +1,12 @@
+
+     //@Scheduled(fixedRate = 10000)
+
+     public void generateOtp() {
+
+           Random random = new Random();
+
+           String format = String.format("%04d", random.nextInt(10000));
+
+           System.out.println(format);
+
+     }
