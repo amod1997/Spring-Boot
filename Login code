@@ -1,0 +1,35 @@
+//login
+
+@Override
+
+     public boolean login(String studentEmail, String studentPassword) throws Exception {
+
+           if (studentEmail == null || studentPassword == null) {
+
+                throw new Exception("Invalid credentials");
+
+           }
+
+ 
+
+           Student email = studentRepository.loginUsingStudentEmailAndStudentPassword(studentEmail, studentPassword);
+
+ 
+
+           try {
+
+                if (studentEmail.equals(email.getStudentEmail()) && studentPassword.equals(email.getStudentPassword())) {
+
+                     return true;
+
+                }
+
+           } catch (Exception e) {
+
+                throw new Exception("Invalid user email and password");
+
+           }
+
+           return false;
+
+     } 
