@@ -1,0 +1,3 @@
+// removing the elements present in one list from another list and getting rest of the elements
+
+     body.removeIf(x -> allLocationNumber.contains(x));
