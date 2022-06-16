@@ -18,6 +18,12 @@ public class EmployeeController {
 	@Autowired
 	private EmployeeService employeeService;
 
+	/***
+	 * controller
+	 * 
+	 * @param employeeRequest
+	 * @return
+	 */
 	@PostMapping("/add")
 	public ResponseEntity<EmployeeResponse> addEmployee(@RequestBody EmployeeRequest employeeRequest) {
 		return ResponseEntity.ok(employeeService.addEmployee(employeeRequest));
