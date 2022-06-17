@@ -17,7 +17,7 @@ public class UniqueCharacter {
 	/***
 	 * 
 	 * @param str
-	 * @return
+	 * @return int
 	 */
 	private static int findFirstCharacter(String str) {
 		HashMap<Character, Integer> map = new HashMap<>();
