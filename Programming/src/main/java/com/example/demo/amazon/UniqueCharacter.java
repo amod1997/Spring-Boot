@@ -14,6 +14,11 @@ public class UniqueCharacter {
 		scan.close();
 	}
 
+	/***
+	 * 
+	 * @param str
+	 * @return
+	 */
 	private static int findFirstCharacter(String str) {
 		HashMap<Character, Integer> map = new HashMap<>();
 		for (int i = 0; i < str.length(); i++) {
