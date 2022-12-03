@@ -8,7 +8,7 @@ class SendEmailApplicationTests {
 
 	@Test
 	void contextLoads() {
-		System.out.println("Local");
+		System.out.println("Locally");
 	}
 
 }
