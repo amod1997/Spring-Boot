@@ -8,6 +8,7 @@ class SendEmailApplicationTests {
 
 	@Test
 	void contextLoads() {
+		System.out.println("Amod");
 	}
 
 }
