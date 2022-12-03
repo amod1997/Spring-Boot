@@ -8,7 +8,7 @@ class SendEmailApplicationTests {
 
 	@Test
 	void contextLoads() {
-		System.out.println("pie");
+		System.out.println("master to pie");
 	}
 
 }
