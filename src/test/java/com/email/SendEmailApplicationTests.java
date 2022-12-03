@@ -8,11 +8,7 @@ class SendEmailApplicationTests {
 
 	@Test
 	void contextLoads() {
-<<<<<<< .mine
 		System.out.println("master to pie");
-=======
-		System.out.println("Locally");
->>>>>>> .theirs
 	}
 
 }
