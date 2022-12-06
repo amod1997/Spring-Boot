@@ -8,6 +8,7 @@ class JdbcTemplateDemoApplicationTests {
 
 	@Test
 	void contextLoads() {
+		System.out.println("by master");
 	}
 
 }
